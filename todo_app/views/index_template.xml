@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <template> (shortcut of ir.ui.view) used to declare Qweb template -->
+
+<odoo>
+
+
+<template id="index_template" name="My Todo List">
+    <div id="wrap" class="container">
+        <h1>Todo Tasks</h1>
+        <!-- List of tasks -->
+        <t t-foreach="tasks" t-as="task">   <!-- loop thru each task from controller -->
+        <div class="row">
+            <span t-field="task.name"/>
+        </div>
+        </t>
+    </div>
+</template>
+
+</odoo>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!-- One method to immediately deploy our model -->
+
+<odoo>
+    <!-- Action to open tree view first, then form view-->
+    <act_window id="action_todo_task"   
+    name = "To-do Task"
+    res_model = "todo.task"
+    view_mode = "tree,form"
+    />
+
+    <!-- Menu items to open -->
+    <menuitem id="menu_todo_task"
+    name = "Todos"
+    action = "action_todo_task"
+    />
+</odoo>
+

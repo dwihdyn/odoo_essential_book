@@ -1,0 +1,15 @@
+<?xml version = "1.0"?>
+<odoo>
+<!-- Inheriting view from res.partner.form -->
+    <record id="my_inherited_view" model="ir.ui.view">
+        <field name="name">Add To-Dos to Partner Form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>     <!-- inserting our extra feature to selected ref (external ID) by using inherit method -->
+        <field name="arch" type="xml">
+            <field name="lang" position="after">    <!-- 2nd method use Xpath. see custom_addons > new_module > views > views.xml -->
+                <field name="todo_ids"/>
+            </field>
+        </field>
+    </record>
+</odoo>
+
